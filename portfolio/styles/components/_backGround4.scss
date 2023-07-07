@@ -1,0 +1,44 @@
+.bg4 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    // background-color: #5c4964;
+
+    &__bubbles {
+        position: relative;
+        display: flex;
+        // z-index: -100;
+    }
+
+    span {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        // background-color: #12001a;
+        margin: 0 4px;
+        border-radius: 40% 60% 40% 60% / 64% 33% 67% 36%;
+        box-shadow: 0 0 0 10px #5c496444,
+            0 0 50px #5c4964,
+            0 0 100px #5c4964;
+        animation: animate2 15s linear infinite;
+        animation-duration: calc(150s / var(--i));
+    }
+
+    span:nth-child(even) {
+        // background-color: #FFFF;
+        box-shadow: 0 0 0 10px #ffffff44,
+            0 0 50px #FFFF,
+            0 0 100px #FFFF;
+    }
+
+    @keyframes animate2 {
+        0% {
+            transform: translateY(100vh) scale(0);
+        }
+
+        100% {
+            transform: translateY(-10vh) scale(1);
+        }
+    }
+}

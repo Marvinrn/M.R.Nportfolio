@@ -1,0 +1,29 @@
+.about {
+    min-height: 100vh;
+    // background-color: #12001a;
+    position: relative;
+
+    &__content {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #90749c;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: 2em;
+        background-color: #12001a;
+    }
+
+    &__description {
+        width: 70%;
+        margin-top: 50px;
+        font-size: 1.5em;
+        background-color: #12001a;
+    }
+}
