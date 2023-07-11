@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import mrnJojo from '../assets/Images/mrnJojo1.png';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const NavBar = () => {
@@ -11,15 +11,21 @@ const NavBar = () => {
         scroll.scrollToTop();
     };
 
-    const onScroll = () => {
-        if (window.scrollY >= 80) {
-            setNavBarActive(true);
-        } else {
-            setNavBarActive(false)
-        }
-    }
+    useEffect(() => {
+        const onScroll = () => {
+            if (typeof window !== 'undefined' && window.scrollY >= 80) {
+                setNavBarActive(true);
+            } else {
+                setNavBarActive(false);
+            }
+        };
 
-    window.addEventListener('scroll', onScroll)
+        window.addEventListener('scroll', onScroll);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
 
     return (
         <header className={`navBar ${navBarActive ? 'active' : 'navBar'}`}>
@@ -35,16 +41,16 @@ const NavBar = () => {
                 <nav className='navBar__nav'>
                     <ul>
                         <li>
-                            <ScrollLink to="home" smooth={true}>Accueil</ScrollLink>
+                            <ScrollLink to="home" smooth={true} duration={100}>Accueil</ScrollLink>
                         </li>
                         <li>
-                            <ScrollLink to="about" smooth={true}>À Propos</ScrollLink>
+                            <ScrollLink to="about" smooth={true} duration={100}>À Propos</ScrollLink>
                         </li>
                         <li>
-                            <ScrollLink to="myProjects" smooth={true}>Mes Projets</ScrollLink>
+                            <ScrollLink to="myProjects" smooth={true} duration={100}>Mes Projets</ScrollLink>
                         </li>
                         <li>
-                            <ScrollLink to="contact" smooth={true}>Contact</ScrollLink>
+                            <ScrollLink to="contact" smooth={true} duration={100}>Contact</ScrollLink>
                         </li>
                     </ul>
                 </nav>
