@@ -3,6 +3,7 @@ import IntroPart from './IntroPart'
 import About from './About'
 import MyProjects from './MyProjects'
 import Contact from './Contact'
+import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <NavBar />
         <IntroPart />
         <About />
         <MyProjects />

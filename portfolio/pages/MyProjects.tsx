@@ -4,7 +4,7 @@ import BackGround3 from '../components/BackGround3';
 
 const MyProjects = () => {
     return (
-        <section className='myProjects'>
+        <section id='myProjects' className='myProjects'>
             <div className='myProjects__content'>
                 <h2 className='myProjects__title'>Mes Projets</h2>
                 <div className='myProjects__cards--flex'>

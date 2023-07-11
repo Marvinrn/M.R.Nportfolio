@@ -12,5 +12,6 @@ html,
 body {
     font-family: $font-1;
     min-height: 100vh;
+    scroll-behavior: smooth;
     // color: #90749c;
 }

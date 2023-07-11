@@ -12,7 +12,7 @@ const IntroPart = () => {
     };
 
     return (
-        <section className='intro'>
+        <section id='home' className='intro'>
             <BackGround />
             <div className='intro__content'>
                 <h1 className='intro__title'>Marvin Rodrigues Novo</h1>

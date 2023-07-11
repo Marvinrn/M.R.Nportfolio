@@ -3,7 +3,7 @@ import BackGround4 from '../components/BackGround4';
 
 const Contact = () => {
     return (
-        <section className='contact'>
+        <section id='contact' className='contact'>
             <BackGround4 />
             <div className='contact__content'>
                 <h1 className='contact__title'>Marvin Rodrigues Novo</h1>
