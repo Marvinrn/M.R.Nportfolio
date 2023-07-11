@@ -1,18 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BackGround2 from '../components/BackGround2';
 import Image from 'next/image';
-import mrnJojo from '../assets/Images/mrnJojo1.png'
+import mrnJojo from '../assets/Images/mrnJojo1.png';
 
-const About = () => {
+const calculateAge = (birthdate: Date): number => {
+    const today = new Date();
+    const birthdateNormalized = new Date(birthdate.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+    let age = today.getFullYear() - birthdateNormalized.getFullYear();
+
+    if (
+        today.getMonth() < birthdateNormalized.getMonth() ||
+        (today.getMonth() === birthdateNormalized.getMonth() && today.getDate() < birthdateNormalized.getDate())
+    ) {
+        age--;
+    }
+
+    return age;
+};
+
+const About: React.FC = () => {
+    const birthdate = new Date('1998-08-08');
+    const [age, setAge] = useState<number>(calculateAge(birthdate));
+
+    useEffect(() => {
+        const calculatedAge = calculateAge(birthdate);
+        setAge(calculatedAge);
+    }, [birthdate]);
+
     return (
         <section id='about' className='about'>
             <div className='about__content'>
-                <h2 className='about__title'> A PROPOS DE MOI</h2>
+                <h2 className='about__title'>A PROPOS DE MOI</h2>
                 <Image src={mrnJojo} alt='Dessin de moi en version Jojo Bizarre Adventure' width={350} height={350} />
-                <p className='about__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod commodo eros, sed fringilla purus tristique in. Sed bibendum, diam sed finibus feugiat, justo lectus vestibulum nulla, nec tincidunt lacus lorem id diam. Mauris malesuada justo in ex tempus, vitae varius tortor tristique. In hac habitasse platea dictumst. Nulla nec leo rutrum, sollicitudin nunc id, laoreet purus. Donec semper, mauris vel dignissim fringilla, lorem urna blandit dui, eget posuere sapien neque vitae nunc. Proin rutrum augue a ex tincidunt, eu ullamcorper nulla dapibus. Maecenas eu erat vitae tellus condimentum scelerisque.</p>
+                <p className='about__description'>Salut ! Moi, c'est Marvin. J'ai {age} ans et je suis passionné par le développement web. J'ai acquis mes compétences dans ce domaine fascinant en autodidacte , et actuellement, je suis à la recherche d'une opportunité d'alternance.
+                    <br />
+                    Ma vie est animée par mes deux plus grandes passions : les jeux vidéo et l'univers captivant des mangas. Ces deux univers m'inspirent constamment et nourrissent ma créativité. J'adore explorer de nouveaux mondes virtuels et me plonger dans des récits épiques.</p>
             </div>
             <BackGround2 />
         </section>
     );
 };
+
 export default About;
