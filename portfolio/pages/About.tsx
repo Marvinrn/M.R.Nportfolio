@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <div className='about__content'>
                 <h2 className='about__title'>A PROPOS DE MOI</h2>
                 <Image src={mrnJojo} alt='Dessin de moi en version Jojo Bizarre Adventure' width={350} height={350} />
-                <p className='about__description'>Salut ! Moi, c'est Marvin. J'ai {age} ans et je suis passionné par le développement web. J'ai acquis mes compétences dans ce domaine fascinant en autodidacte , et actuellement, je suis à la recherche d'une opportunité d'alternance.
+                <p className='about__description'>Salut ! Moi, c'est Marvin. J'ai {age} ans et je suis passionné par le développement web. J'ai acquis mes compétences dans ce domaine fascinant en autodidacte, et actuellement, je suis à la recherche d'une opportunité d'alternance.
                     <br />
                     Ma vie est animée par mes deux plus grandes passions : les jeux vidéo et l'univers captivant des mangas. Ces deux univers m'inspirent constamment et nourrissent ma créativité. J'adore explorer de nouveaux mondes virtuels et me plonger dans des récits épiques.</p>
             </div>

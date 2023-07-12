@@ -7,10 +7,6 @@ import { useState, useEffect } from 'react';
 const NavBar = () => {
     const [navBarActive, setNavBarActive] = useState(false)
 
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
-
     useEffect(() => {
         const onScroll = () => {
             if (typeof window !== 'undefined' && window.scrollY >= 80) {
@@ -30,14 +26,12 @@ const NavBar = () => {
     return (
         <header className={`navBar ${navBarActive ? 'active' : 'navBar'}`}>
             <div className='navBar__flex'>
-                <ScrollLink to="home" smooth={true} onClick={scrollToTop}>
-                    <Image
-                        src={mrnJojo}
-                        alt='Dessin de moi en version Jojo Bizarre Adventure'
-                        width={100}
-                        height={100}
-                    />
-                </ScrollLink>
+                <Image
+                    src={mrnJojo}
+                    alt='Dessin de moi en version Jojo Bizarre Adventure'
+                    width={100}
+                    height={100}
+                />
                 <nav className='navBar__nav'>
                     <ul>
                         <li>

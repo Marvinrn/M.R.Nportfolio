@@ -11,6 +11,7 @@ const MyProjects = () => {
                     <div className='myProjects__cards'>
                         <h3>Projet 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod commodo eros, sed fringilla purus tristique in. Sed bibendum, diam sed finibus feugiat, justo lectus vestibulum nulla, nec tincidunt lacus lorem id diam. Mauris malesuada justo in ex tempus, vitae varius tortor tristique. In hac habitasse platea dictumst. Nulla nec leo rutrum, sollicitudin nunc id, laoreet purus. Donec semper, mauris vel dignissim fringilla, lorem urna blandit dui, eget posuere sapien neque vitae nunc. Proin rutrum augue a ex tincidunt, eu ullamcorper nulla dapibus. Maecenas eu erat vitae tellus condimentum scelerisque</p>
+                        <button>Test</button>
                     </div>
                     <div className='myProjects__cards'>
                         <h3>Projet 1</h3>
