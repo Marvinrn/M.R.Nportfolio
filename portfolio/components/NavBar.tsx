@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import mrnJojo from '../assets/Images/mrnJojo1.png';
+import mrnJojo from '../assets/Images/Avatar1.png';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { useState, useEffect } from 'react';
 
