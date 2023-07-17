@@ -2,6 +2,7 @@
     background-color: #12001a;
 
     &__content {
+        position: relative;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -10,6 +11,7 @@
         align-items: center;
         text-align: center;
         color: #12001a;
+        z-index: 100;
 
     }
 
@@ -23,10 +25,57 @@
         color: whitesmoke;
     }
 
+    &__mail {
+        font-size: 2em;
+        padding: 5px;
+        text-decoration: none;
+        color: #90749c;
+        font-weight: bold;
+        position: relative;
+        transition: color 0.5s ease;
+
+        &:hover {
+            color: white;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: #5c4964;
+            transition: max-width .5s ease;
+            width: 100%;
+            max-width: 0px;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            max-width: 100%;
+            right: unset;
+            left: 0;
+        }
+    }
+
+    // &__mail {
+    //     font-size: 2em;
+    //     padding: 5px;
+    //     text-decoration: none;
+    //     color: #90749c;
+    //     font-weight: bold;
+    //     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+
+    //     &:hover {
+    //         box-shadow: inset 0 -50px 0 0 #5c4964;
+    //         color: white;
+    //     }
+    // }
+
     &__btn {
         align-items: center;
-        background-color: #12001a;
-        border: 2px solid #12001a;
+        background-color: #5c4964;
+        border: 2px solid #5c4964;
         color: #fff;
         cursor: pointer;
         font-size: 1em;
@@ -47,17 +96,22 @@
         text-transform: uppercase;
     }
 
+    &__btnLink {
+        text-decoration: none;
+        color: #fff;
+    }
+
 
     &__btn:hover {
-        background-color: #12001a94;
-        border-color: #12001a94;
-        fill: #12001a;
+        background-color: #5c496494;
+        border-color: #5c496494;
+        fill: #5c4964;
     }
 
     &__btn:active {
-        background-color: #12001a;
-        border-color: #12001a;
-        fill: #12001a;
+        background-color: #5c4964;
+        border-color: #5c4964;
+        fill: #5c4964;
     }
 
     @media (min-width: 768px) {
