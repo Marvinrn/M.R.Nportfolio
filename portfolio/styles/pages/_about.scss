@@ -16,7 +16,7 @@
     }
 
     &__title {
-        font-size: 2em;
+        font-size: 2.5em;
         background-color: #12001a;
     }
 
@@ -25,5 +25,17 @@
         margin-top: 50px;
         font-size: 1.5em;
         background-color: #12001a;
+    }
+}
+
+.about {
+    @media(max-width: 760px) {
+        padding: 60px 0;
+    }
+
+    &__description {
+        @media(max-width: 530px) {
+            font-size: 1.2em;
+        }
     }
 }

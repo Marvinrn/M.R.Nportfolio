@@ -42,3 +42,11 @@
         }
     }
 }
+
+.bg4 {
+    span {
+        @media(max-width: 530px) {
+            height: 0.5px;
+        }
+    }
+}

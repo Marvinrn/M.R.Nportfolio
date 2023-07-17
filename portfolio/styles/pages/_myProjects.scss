@@ -18,13 +18,12 @@
 
     &__title {
         position: relative;
-        font-size: 2em;
+        font-size: 2.5em;
         background-color: #5c4964;
         color: whitesmoke;
     }
 
     &__cards--flex {
-        background-color: #5c4964;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -59,6 +58,18 @@
 
         &:hover {
             object-position: bottom;
+        }
+    }
+}
+
+.myProjects {
+    @media(max-width: 760px) {
+        padding: 60px 0;
+    }
+
+    &__cards {
+        @media(max-width: 530px) {
+            width: 300px;
         }
     }
 }

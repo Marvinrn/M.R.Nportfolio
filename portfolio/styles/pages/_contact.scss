@@ -16,7 +16,7 @@
     }
 
     &__title {
-        font-size: 3em;
+        font-size: 2.5em;
         color: whitesmoke;
     }
 
@@ -33,6 +33,7 @@
         font-weight: bold;
         position: relative;
         transition: color 0.5s ease;
+        cursor: pointer;
 
         &:hover {
             color: white;
@@ -58,19 +59,48 @@
         }
     }
 
-    // &__mail {
-    //     font-size: 2em;
-    //     padding: 5px;
-    //     text-decoration: none;
-    //     color: #90749c;
-    //     font-weight: bold;
-    //     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    &__links--flex {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-    //     &:hover {
-    //         box-shadow: inset 0 -50px 0 0 #5c4964;
-    //         color: white;
-    //     }
-    // }
+    }
+
+    &__links {
+        padding: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #90749c;
+        position: relative;
+        transition: color 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: #5c4964;
+            transition: max-width .5s ease;
+            width: 100%;
+            max-width: 0px;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            max-width: 100%;
+            right: unset;
+            left: 0;
+        }
+    }
 
     &__btn {
         align-items: center;
@@ -89,7 +119,7 @@
         padding: 0 17px;
         text-align: center;
         text-decoration: none;
-        transition: all .3s;
+        transition: all .5s;
         user-select: none;
         touch-action: manipulation;
         font-family: sans-serif;
@@ -117,6 +147,28 @@
     @media (min-width: 768px) {
         &__btn {
             min-width: 170px;
+        }
+    }
+}
+
+.contact {
+
+    &__content {
+        @media(max-width: 530px) {
+            padding: 20px;
+        }
+    }
+
+    &__mail {
+        @media(max-width: 530px) {
+            font-size: 1.8em;
+        }
+    }
+
+    &__links--flex {
+        @media(max-width: 530px) {
+            flex-direction: column;
+            gap: 10px;
         }
     }
 }

@@ -3,19 +3,17 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    // background-color: #5c4964;
+
 
     &__bubbles {
         position: relative;
         display: flex;
-        // z-index: -100;
     }
 
     span {
         position: relative;
         width: 30px;
         height: 30px;
-        // background-color: #12001a;
         margin: 0 4px;
         border-radius: 40% 60% 40% 60% / 64% 33% 67% 36%;
         box-shadow: 0 0 0 10px #12001a44,
@@ -26,7 +24,6 @@
     }
 
     span:nth-child(even) {
-        // background-color: #FFFF;
         box-shadow: 0 0 0 10px #ffffff44,
             0 0 50px #FFFF,
             0 0 100px #FFFF;
@@ -39,6 +36,14 @@
 
         100% {
             transform: translateY(100vh) scale(1);
+        }
+    }
+}
+
+.bg {
+    span {
+        @media(max-width: 530px) {
+            height: 0.5px;
         }
     }
 }

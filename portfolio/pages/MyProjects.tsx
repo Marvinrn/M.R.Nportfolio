@@ -24,7 +24,7 @@ const MyProjects = () => {
     return (
         <section id='myProjects' className='myProjects'>
             <div className='myProjects__content'>
-                <h2 className='myProjects__title'>Mes Projets</h2>
+                <h2 className='myProjects__title'>Les projets dont je suis fier</h2>
                 <div className='myProjects__cards--flex'>
                     <div className='myProjects__cards'>
                         <h3><a href='https://github.com/Marvinrn/groupomaniaV2' target='blank'>GroupomaniaV2</a></h3>
