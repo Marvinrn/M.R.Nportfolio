@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 const MyProjects = () => {
     const settings = {
         dots: true,
+        arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -24,36 +25,42 @@ const MyProjects = () => {
                 <h2 className='myProjects__title'>Mes Projets</h2>
                 <div className='myProjects__cards--flex'>
                     <div className='myProjects__cards'>
-                        <h3>GroupomaniaV2</h3>
+                        <h3><a href='https://github.com/Marvinrn/groupomaniaV2' target='blank'>GroupomaniaV2</a></h3>
                         <Slider {...settings} className='caroussel'>
-                            {GroupomaniaV2.map(({ id, cover }) => {
+                            {GroupomaniaV2.map(({ id, cover, alt }) => {
                                 return (
                                     <div key={id}>
-                                        <Image className='myProjects__img' src={cover} alt='test' width={500} height={200} />
+                                        <a href='https://github.com/Marvinrn/groupomaniaV2' target='blank'>
+                                            <Image className='myProjects__img' src={cover} alt={alt} width={500} height={200} />
+                                        </a>
                                     </div>
                                 )
                             })}
                         </Slider>
                     </div>
                     <div className='myProjects__cards'>
-                        <h3>PickerWheel</h3>
+                        <h3><a href='https://picker-wheel.vercel.app/' target='blank'>PickerWheel</a></h3>
                         <Slider {...settings} className='caroussel'>
-                            {PickerWheel.map(({ id, cover }) => {
+                            {PickerWheel.map(({ id, cover, alt }) => {
                                 return (
                                     <div key={id}>
-                                        <Image className='myProjects__img' src={cover} alt='test' width={500} height={200} />
+                                        <a href='https://picker-wheel.vercel.app/' target='blank'>
+                                            <Image className='myProjects__img' src={cover} alt={alt} width={500} height={200} />
+                                        </a>
                                     </div>
                                 )
                             })}
                         </Slider>
                     </div>
                     <div className='myProjects__cards'>
-                        <h3>OdenWeeb</h3>
+                        <h3><a href='https://oden-weeb.vercel.app/' target='blank'>OdenWeeb</a></h3>
                         <Slider {...settings} className='caroussel'>
-                            {OdenWeeb.map(({ id, cover }) => {
+                            {OdenWeeb.map(({ id, cover, alt }) => {
                                 return (
                                     <div key={id}>
-                                        <Image className='myProjects__img' src={cover} alt='test' width={500} height={200} />
+                                        <a href='https://oden-weeb.vercel.app/' target='blank'>
+                                            <Image className='myProjects__img' src={cover} alt={alt} width={500} height={200} loading="lazy" />
+                                        </a>
                                     </div>
                                 )
                             })}

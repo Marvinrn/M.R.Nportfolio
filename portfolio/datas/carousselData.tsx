@@ -19,21 +19,25 @@ export const GroupomaniaV2 = [
     {
         id: 1,
         cover: groupomaniaV2Registration,
+        alt: 'Image de la page de création de compte du site groupomania'
     },
 
     {
         id: 2,
-        cover: groupomaniaV2Login
+        cover: groupomaniaV2Login,
+        alt: 'Image de la page de connexion du site Goupomania'
     },
 
     {
         id: 3,
-        cover: groupomaniaV2Home
+        cover: groupomaniaV2Home,
+        alt: 'Image de la page d\'accueil/timeline du site Groupomania'
     },
 
     {
         id: 4,
-        cover: groupomaniaV2Modal
+        cover: groupomaniaV2Modal,
+        alt: 'Image du boutton publier'
     }
 ]
 
@@ -41,25 +45,30 @@ export const PickerWheel = [
     {
         id: 1,
         cover: pickerWheelHome,
+        alt: 'Image de la page d\'accueil du site PickerWheel'
     },
 
     {
         id: 2,
-        cover: pileOuFaceHome
+        cover: pileOuFaceHome,
+        alt: 'Image de la page d\'accueil du site PickerWheel'
     },
 
     {
         id: 3,
-        cover: pickerWheel
+        cover: pickerWheel,
+        alt: 'Image de la roue du site PickerWheel'
     },
     {
         id: 4,
-        cover: pickerWheelwin
+        cover: pickerWheelwin,
+        alt: 'Image du gagnant du tirage au sort de la roue PickerWheel'
     },
 
     {
         id: 5,
-        cover: pileOuFace
+        cover: pileOuFace,
+        alt: 'Image de la page Pile ou Face du site PickerWheel'
     }
 ]
 
@@ -68,24 +77,29 @@ export const OdenWeeb = [
     {
         id: 1,
         cover: odenWeebHome,
+        alt: 'Image de la page d\'accueil du site OdenWeeb'
     },
 
     {
         id: 2,
-        cover: odenWeebTops
+        cover: odenWeebTops,
+        alt: 'Image de la partie top du site OdenWeeb'
     },
 
     {
         id: 3,
-        cover: odenWeebTopOpen
+        cover: odenWeebTopOpen,
+        alt: 'Image de la partie top du site OdenWeeb'
     },
     {
         id: 4,
-        cover: odenWeebReco
+        cover: odenWeebReco,
+        alt: 'Image d\'un des top de la partie recommandation du site OdenWeeb'
     },
 
     {
         id: 5,
-        cover: odenWeebCaroussel
+        cover: odenWeebCaroussel,
+        alt: 'Image d\'un des caroussels ouvert de la partie OdenWeeb'
     }
 ]

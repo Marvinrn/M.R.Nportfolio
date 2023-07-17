@@ -1,3 +1,9 @@
+.slick-dots li button:before {
+    color: #90749c !important;
+    font-size: 10px !important;
+    /* Remplacez cette valeur par la couleur souhaitée pour les dots inactifs */
+}
+
 .slick-dots li.slick-active button:before {
-    color: White !important;
+    color: #90749c !important;
 }

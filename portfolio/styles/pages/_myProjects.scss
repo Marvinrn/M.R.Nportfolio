@@ -11,14 +11,16 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 50px;
+        gap: 70px;
         color: whitesmoke;
         z-index: 1;
     }
 
     &__title {
         position: relative;
+        font-size: 2em;
         background-color: #5c4964;
+        color: whitesmoke;
     }
 
     &__cards--flex {
@@ -33,16 +35,25 @@
     &__cards {
         gap: 20px;
         width: 500px;
-        padding: 20px;
+        padding: 10px 0px 30px 0px;
         background-color: #12001a;
         // align-items: center;
     }
 
     h3 {
         margin-bottom: 10px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
     }
 
+
+
     &__img {
+        width: 100%;
         object-fit: cover;
         object-position: top;
         transition: object-position 2s ease;
