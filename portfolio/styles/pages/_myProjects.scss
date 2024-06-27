@@ -59,6 +59,7 @@
   }
 
   &__description {
+    padding: 0 40px;
     font-size: 0.9em;
     margin: auto;
     display: flex;
@@ -117,6 +118,22 @@
   &__cards {
     @media (max-width: 530px) {
       width: 300px;
+    }
+  }
+
+  &__description {
+    @media (max-width: 530px) {
+      padding: 0 20px;
+      width: 300px;
+      font-size: 0.8em;
+      line-height: normal;
+    }
+  }
+
+  &__DescriptionBtn {
+    @media (max-width: 530px) {
+      width: 300px;
+      height: 70px;
     }
   }
 }

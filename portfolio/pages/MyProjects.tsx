@@ -48,27 +48,22 @@ const MyProjects = () => {
           <div className="myProjects__project">
             <div className="myProjects__cards">
               <h3>
-                <a href="https://oden-weeb.vercel.app/" target="blank">
-                  Sandman
-                </a>
+                <a>Sandman</a>
               </h3>
 
               {showDescription[0] ? (
                 <div className="myProjects__description">
                   <p>
-                    Découvrez Sandman, un jeu mobile développé en C# avec Unity.
+                    Découvrez Sandman, jeu mobile en pixel art (pixel art fait
+                    par mes soins) développé en C# avec Unity. Ce projet marque
+                    la création de mon tout premier jeu.
                     <br />
                     Les joueurs doivent rapidement et précisément cliquer sur
-                    <br />
                     des personnages apparaissant aléatoirement aux fenêtres d'un
-                    <br />
                     immeuble pour les endormir avec du sable soporifique et
-                    <br />
                     accumuler des points. Le rythme du jeu s'accélère
-                    <br />
                     progressivement, offrant une expérience captivante et
-                    <br />
-                    dynamique en pixel art.
+                    dynamique.
                   </p>
                 </div>
               ) : (
@@ -76,7 +71,7 @@ const MyProjects = () => {
                   {Sandman.map(({ id, cover, alt }) => {
                     return (
                       <div key={id}>
-                        <a href="https://oden-weeb.vercel.app/" target="blank">
+                        <a>
                           <Image
                             className="myProjects__img"
                             src={cover}
@@ -173,20 +168,16 @@ const MyProjects = () => {
                 <div className="myProjects__description">
                   <p>
                     PickerWheel est un site web développé avec TypeScript et
-                    <br />
                     Next.js, proposant deux jeux de tirage au sort entièrement
-                    <br />
                     aléatoires.
                     <br />
                     -Le 1er jeu est une roue de tirage au sort entièrement codée
-                    <br />
                     à la main. Entrer une valeur ajoute un segment à la roue et
-                    <br />
                     la divise selon le nombre de valeurs. Appuyer sur "Spin"
-                    <br />
                     pour laisser le hasard choisir un gagnant.
-                    <br /> -Le deuxième jeu est une version classique du jeu de
-                    pile ou face.
+                    <br />
+                    -Le deuxième jeu est une version classique du jeu de pile ou
+                    face.
                   </p>
                 </div>
               ) : (
@@ -231,18 +222,13 @@ const MyProjects = () => {
                 <div className="myProjects__description">
                   <p>
                     Oden Weeb est mon tout premier projet de découverte et
-                    <br />
                     d'entraînement à React et Sass centré sur ma passion pour
-                    <br />
                     l'univers du manga c'est pourquoi je le présente ici car il
-                    <br />
                     me tient beaucoup à cœur.
                     <br />
                     Sur ce site vous pourrez trouver l'ensemble de mes
-                    <br />
-                    préférences en matière d'animé/manga ainsi que les
-                    <br />
-                    musiques d'animé
+                    préférences en matière d'animé/manga ainsi que les musiques
+                    d'animé
                   </p>
                 </div>
               ) : (
