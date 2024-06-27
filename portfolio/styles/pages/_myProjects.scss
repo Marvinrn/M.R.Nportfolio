@@ -1,75 +1,122 @@
 .myProjects {
-    min-height: 100vh;
+  min-height: 100vh;
+  position: relative;
+
+  &__content {
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 70px;
+    color: whitesmoke;
+    z-index: 1;
+  }
 
+  &__title {
+    position: relative;
+    font-size: 2.5em;
+    background-color: #5c4964;
+    color: whitesmoke;
+  }
 
-    &__content {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 70px;
-        color: whitesmoke;
-        z-index: 1;
+  &__cards--flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__cards {
+    gap: 20px;
+    width: 500px;
+    padding: 10px 0px 30px 0px;
+    background-color: #12001a;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
     }
+  }
 
-    &__title {
-        position: relative;
-        font-size: 2.5em;
-        background-color: #5c4964;
-        color: whitesmoke;
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: object-position 2s ease;
+
+    &:hover {
+      object-position: bottom;
     }
+  }
 
-    &__cards--flex {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 50px;
-    }
+  &__description {
+    font-size: 0.9em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    line-height: 25px;
+    height: 200px;
+    width: 100%;
+  }
 
-    &__cards {
-        gap: 20px;
-        width: 500px;
-        padding: 10px 0px 30px 0px;
-        background-color: #12001a;
-    }
+  &__DescriptionBtn {
+    margin-top: 5px;
+    align-items: center;
+    background-color: #12001a;
+    border: 2px solid #12001a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -0.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
 
-    h3 {
-        margin-bottom: 10px;
-        text-align: center;
+  &__DescriptionBtn:hover {
+    background-color: #12001a94;
+    border-color: #12001a94;
+    fill: #12001a;
+  }
 
-        a {
-            text-decoration: none;
-            color: whitesmoke;
-        }
-    }
-
-
-
-    &__img {
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-        transition: object-position 2s ease;
-
-        &:hover {
-            object-position: bottom;
-        }
-    }
+  &__DescriptionBtn:active {
+    background-color: #12001a;
+    border-color: #12001a;
+    fill: #12001a;
+  }
 }
 
 .myProjects {
-    @media(max-width: 760px) {
-        padding: 60px 0;
-    }
+  @media (max-width: 760px) {
+    padding: 60px 0;
+  }
 
-    &__cards {
-        @media(max-width: 530px) {
-            width: 300px;
-        }
+  &__cards {
+    @media (max-width: 530px) {
+      width: 300px;
     }
+  }
 }
